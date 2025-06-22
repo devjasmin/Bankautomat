@@ -1,0 +1,41 @@
+  let count = 0;
+  const minCount = -300;
+  const maxCount = 1400;
+ 
+
+      function countAuszahlung() {
+        if (count <= minCount) {
+           alert("Achtung: Kontostand darf nicht überzogen werden!");
+          return;
+        }
+        count-=100;
+        countAnzeigen();
+             
+      }
+
+      function countEinzahlung() {
+        if(count >=maxCount){
+          alert("Herzlichen Dank für deine heutige Einzahlung");
+          return;
+        }
+        count+= 100;
+        countAnzeigen();
+       
+      }
+
+      function countAnzeigen() {
+        console.log(count);
+        let element = document.getElementById("zahl");
+        element.innerHTML = count;
+
+        if (count < 0){
+          element.style.color= "red";
+        } else {
+          element.style.color = "black";
+        }
+      
+                     
+      }
+
+
+        
