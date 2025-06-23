@@ -3,8 +3,8 @@ body {
   padding: 1rem;
 }
 
-.heading {
-  background-color: rgb(175, 174, 174);
+.counting {
+  background-color: rgb(157, 175, 232);
   padding: 1rem;
   text-transform: uppercase;
   border: rgb(22, 22, 216) solid 10px;
@@ -20,6 +20,14 @@ span {
   font-size: 2rem;
 }
 
+.zahl {
+  color: red;
+}
+
+.zahl1 {
+  color: green;
+}
+
 button {
   margin: 1rem;
   padding: 1rem;
@@ -31,5 +39,5 @@ button:hover {
   margin: 1rem;
   padding: 1rem;
   font-size: 1.5rem;
-  background-color: red;
+  background-color: rgb(102, 102, 102);
 }
