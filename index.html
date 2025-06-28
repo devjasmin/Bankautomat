@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bankautomat</title>
-    <link rel="stylesheet" href="style.css" />
     <script src="main.js"></script>
+    <style>
+      .rot {
+        color: red;
+      }
+    </style>
   </head>
   <body>
-    <div class="counting">
-      <h2>Bankautomat</h2>
-      <button onclick="countAuszahlung()">Auszahlung</button>
-      <span id="zahl" "zahl1">0</span>
-      <span> CHF</span>
-      <button onclick="countEinzahlung()">Einzahlung</button>         
-    </div>
-   
+    <h2>Bankautomat</h2>
+    <button onclick="countAuszahlung()">100 CHF auszahlen</button>
+    <span>Kontostand: </span> <span id="anzeige">0</span><span>CHF</span>
+    <button onclick="countEinzahlung()">100 CHF einzahlen</button>
   </body>
 </html>

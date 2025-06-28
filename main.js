@@ -1,38 +1,34 @@
 let count = 0;
 const minCount = -200;
-const maxCount = 600;
+const maxCount = 800;
 
 function countAuszahlung() {
-  if (count <= minCount) {
+  if (count > minCount) {
+    count -= 100;
+    countAnzeigen();
+  } else {
     alert("Keine Auszahlung mehr möglich!");
     return;
   }
-  count -= 50;
-  countAnzeigen();
 }
 
 function countEinzahlung() {
-  if (count >= maxCount) {
-    alert("Besten Dank für deine Einzahlung");
+  if (count < maxCount) {
+    count += 100;
+    countAnzeigen();
+  } else {
+    alert("Keine Einzahlungen mehr erlaubt");
     return;
   }
-  count += 50;
-  countAnzeigen();
 }
 
 function countAnzeigen() {
-  const element = document.getElementById("zahl");
+  const element = document.getElementById("anzeige");
   element.innerHTML = count;
-
   if (count < 0) {
-    element.classList.add("zahl");
+    element.classList.add("rot");
   } else {
-    element.classList.remove("zahl");
-  }
-  if (count > 0) {
-    element.classList.add("zahl1");
-  } else {
-    element.classList.remove("zahl1");
+    element.classList.remove("rot");
   }
 
   countAnzeigen();
